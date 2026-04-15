@@ -66,6 +66,9 @@ body{font-family:var(--sans);background:var(--white);color:var(--text);-webkit-f
 .hero-stack input::placeholder{color:rgba(255,255,255,.36);}
 .hero-stack input:focus{border-color:var(--teal);background:rgba(27,179,138,.07);}
 .hero-stack>div{display:flex;gap:0;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:6px;backdrop-filter:blur(8px);}
+.n-form .nrml{display: block !important; background:none;border:none;border-radius:0;padding:0px;backdrop-filter:none;}
+.n-form .nrml input{width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:13px 18px;font-size:15px;color:#fff;font-family:var(--sans);outline:none;transition:border-color .2s,background .2s;backdrop-filter:blur(8px);}
+.n-form .nrml button{display: block;align-items:center;gap:6px;padding:10px 22px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);border:none;text-decoration:none;transition:all .15s;margin-top: 11px; width: 100%;}
 .hero-stack>div input{background:none;border:none;border-radius:0;padding:8px 14px;backdrop-filter:none;}
 .hero-stack>div input:focus{background:none;border-color:transparent;}
 .hero-note{font-size:12px;color:rgba(255,255,255,.36);display:flex;align-items:center;gap:6px;}
@@ -375,11 +378,11 @@ input.field-error::placeholder{color:rgba(239,68,68,.5);}
       <h1 class="hero-h1 reveal d1">Smart books for<br><em>Indian business.</em><br>Simple as WhatsApp.</h1>
       <p class="hero-sub reveal d2">GST invoices, party ledger, inventory, payroll and tax returns — all in one app that actually makes sense for your kirana, shop or trading business.</p>
       <div class="hero-form-wrap reveal d3">
-        <div class="hero-stack">
-          <input type="text" id="hero-name" name="name" placeholder="Your full name" autocomplete="name">
-          <input type="email" id="hero-email" placeholder="Your email address" autocomplete="email">
-          <div style="display:flex;gap:0;">
-            <input type="tel" id="hero-phone" placeholder="Your mobile number" maxlength="10" style="flex:1;">
+        <div class="hero-stack n-form">
+          <input type="text" id="hero-name" name="name" placeholder="Your full name *" autocomplete="name">
+          <input type="email" id="hero-email" placeholder="Your email address *" autocomplete="email">
+          <div class="nrml">
+            <input type="tel" id="hero-phone" placeholder="Your mobile number *" maxlength="10">
             <button class="btn btn-p" onclick="join()">Get early access →</button>
           </div>
         </div>
@@ -762,11 +765,11 @@ input.field-error::placeholder{color:rgba(239,68,68,.5);}
   <div class="cta-inner">
     <h2 class="reveal">Stop losing money<br>to <em>bad books.</em></h2>
     <p class="reveal d1">Join thousands of Indian business owners switching from notebooks and Tally to something that actually works in 2026.</p>
-    <div class="cta-stack reveal d2">
-      <input type="text" id="cta-name" name="name" placeholder="Your full name" autocomplete="name">
-      <input type="email" id="cta-email" placeholder="Your email address" autocomplete="email">
-      <div class="cta-phone-row">
-        <input type="tel" id="cta-phone" placeholder="Your mobile number" maxlength="10">
+    <div class="cta-stack reveal d2 n-form">
+      <input type="text" id="cta-name" name="name" placeholder="Your full name *" autocomplete="name">
+      <input type="email" id="cta-email" placeholder="Your email address *" autocomplete="email">
+      <div class="cta-phone-row nrml">
+        <input type="tel" id="cta-phone" placeholder="Your mobile number *" maxlength="10">
         <button class="btn btn-p btn-lg" onclick="joinCta()">Get early access →</button>
       </div>
     </div>
